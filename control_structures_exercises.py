@@ -76,6 +76,22 @@ for n in range(1, 51):
     print('Here is an odd number: {}'.format(n))
 # Note to self: Have questions on this problem.
 
+#trying part c again
+num = input('Enter an odd number between 1 and 50: ')
+if (num.isdigit()) and (int(num) >= 1 or int(num) <= 50):
+    if int(num) % 2 == 0:
+    break
+    elif int(num) % 2 != 0:
+        print('Number to skip is: ' + num)
+else:
+    num = input('Enter an odd number between 1 and 50: ')
+for n in range(1, 51):
+    if n == int(num):
+        print('Yikes! Skipping number: ' + num)
+        continue
+    if n % 2 != 0:
+        print('Here is an odd number: {}'.format(n))
+
 #part d
 pos_num = int(input('Enter a positive number: '))
 while pos_num < 0 or not isdigit(pos_num):
@@ -106,5 +122,17 @@ for fizzbuzz in range(100):
     print(fizzbuzz)
 
 #Excercise 4
-
 #Ask in class how to do this one. Not sure how to make the table, maybe with just all strings?
+
+running = True
+while running:
+    num = int(input("What number would you like to go up to?: "))
+    print()
+    for x in range(1, num + 1):
+        print(x, x ** 2, x ** 3)
+
+    question = input("Would you like to do another table? Yes or No?: ")
+    if question == 'No':
+        break
+    else:
+        continue
