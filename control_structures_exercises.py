@@ -123,7 +123,6 @@ for fizzbuzz in range(100):
 
 #Excercise 4
 #Ask in class how to do this one. Not sure how to make the table, maybe with just all strings?
-
 running = True
 while running:
     num = int(input("What number would you like to go up to?: "))
@@ -136,3 +135,37 @@ while running:
         break
     else:
         continue
+
+#Exercise 5
+running = True
+while running:
+    num_grade = int(input("Enter a numerical grade from 0 to 100: "))
+    if score >= 88:
+        print "A"
+    elif 80 =< score < 88:
+        print "B"
+    elif 67 =< score < 80:
+        print "C"
+    elif 60 =< score < 67:
+        print "D"
+    else:
+        print "F"
+
+        question = input("Would you like to continue? Yes or No?: ")
+    if question == 'No':
+        break
+    else:
+        continue
+
+#Exercise 6
+dictList = [ {'title': 'Writing On The Wall: Selected Prison Writings', 'author': 'Mumia Abu-Jamal', 'genre': 'Non-Fiction'},
+{'title': 'The Art of Simple Living', 'author': 'Shunmyo Masuno', 'genre': 'Self-Help'},
+{'title': 'Parable of the Sower', 'author': 'Octavia E. Butler', 'genre': 'Sci-Fi'} ]
+
+for entry in dictList:
+    print(entry)
+
+genre = input("Enter a genre: ")
+for entry in dictList:
+    if genre == entry['genre']:
+        print(entry['title'])
