@@ -5,7 +5,7 @@
 #Exercise 1
 x = input('Input: ')
 def is_two(x):
-    if x == '2':
+    if x == '2' or x == 2:
         return True
     else:
         return False
@@ -27,14 +27,18 @@ def is_consonant(char):
         return False
 
 #Exercise 4
-def capitalize(str):
-    if is_consonant(str[0]):
-        return capitalize(str)
+def str_cap(word):
+    assert type(word) == str, "Invalid input - must be string."
+    if is_consonant(word[0]) and (' ' not in word):
+        str[0].upper()
+        return word
     else:
-        return str
+        return word
 
 #Exercise 5
 def calculate_tip(tip_per, bill_total):
+    assert type(tip_per) == float, "Please use a float"
+    assert type(bill_total) == float, "Please use a float"
     tip_amount = (tip_per * bill_total)
     return tip_amount
 
@@ -44,6 +48,7 @@ def apply_discount(orig_price, discount):
 
 #Exercise 7
 def handle_commas(str):
+    assert type(string) == str
     new_num = int(str.replace(',', ''))
     return new_num
 
@@ -69,10 +74,34 @@ def remove_vowels(str):
             char.pop()
     return str
 
+#Gabbys
+def remove_vowels(str):
+    vowels = {"a", "e", "i", "o", "u", "A", "E", "I", "O", "U"}
+    chars = []
+    for i in string:
+        if i not in vow:
+            chars.append(i)
+    return joinchars
+    #didnt catch the rest
+
 #Exercise 10
-def normalize_name(str):
+def normalize_name(any_str):
+    newstr = any_str.lower()
+    space = ' '
+    char = '!@#$%^&*'
+    for string in any_str:
+        if string in space:
+            newstr = newstr.replace(space, '_')
+    for string in any_string:
+        if string in char:
+            newstr = newstr.replace(string, '')
+    return newstr
+
 
 #Exercise 11
 def cumulative_sum(list[]):
     for num in list:
         sum = list[num - 1] + list[num]
+
+def cumulative_sum(nums_list):
+    return [sum(nums_list[:i+1])] for i in range(len(nums_list))]
