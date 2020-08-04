@@ -92,6 +92,16 @@ for n in range(1, 51):
     if n % 2 != 0:
         print('Here is an odd number: {}'.format(n))
 
+#part c in class
+user_number = input("Please input a number between 1 and 50: ")
+
+if user_number.isdigit():
+    user_number = int(user_number)
+
+    print(user_number) < 50)
+    print(user_number) > 1)
+    print(user_number) % 2 != 0)
+
 #part d
 pos_num = int(input('Enter a positive number: '))
 while pos_num < 0 or not isdigit(pos_num):
